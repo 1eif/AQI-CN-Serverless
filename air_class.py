@@ -20,7 +20,7 @@ class airChina():
 
         r = requests.post(url='https://air.cnemc.cn:18007/ClientBin/Env-CnemcPublish-RiaServices-EnvCnemcPublishDomainService.svc/binary/'+action,
             data=req,
-            headers={'Content-Type': 'application/msbin1', 'Referer': 'https://air.cnemc.cn:18007/ClientBin/cnemc.xap'})
+            headers={'Content-Type': 'application/msbin1', 'Referer': 'https://air.cnemc.cn:18007/ClientBin/cnemc.xap'}, verify=False)
         res = r.content
 
         buf = BytesIO(res)
